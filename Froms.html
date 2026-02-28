@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>Forms</title>
+    <style>
+        .center{
+            color: black;
+            background-color: gray;
+            margin: auto;
+            text-align: center;
+            width: 1000px;
+            border: 5px;
+        }
+    </style>
+</head>
+<body>
+    <from action = "" method = "POST">
+      <!--- <div class = "center">--->
+        <label for ="username">username:</label>
+        <input type="text" id = "username" placeholder="Harshadev-7"><br><br>
+        <label for="Password">Password:</label>
+        <input type="password" id="Password" placeholder ="Sailaja@99!"required><br><br>
+        <label for="email">Email:</label>
+        <input type="email" id="email" placeholder="gaddamharsha09@gmail.com"><br><br>
+        </div>
+        <label for ="phone">phone.no</label>
+        <input type="tel" id="phone"placeholder = "123-456-7890" pattern="[0-9]{3}-[0-9]{3}-[0-9]{4}"><br><br>
+        <label for="Birthday">Birthday</label>
+        <input type="date"  id="Birthday"><br><br>
+        <label>Qunatity</label>
+        <input type="number" id ="quantity" value = 1 min="0" max="99"><br><br>
+        <label>MR.</label>
+        <input type="radio"name="title" required>
+         <label>MR.</label>
+         <input type="radio"name="title" required>
+
+          <label>Ms.</label>
+          <input type="radio"name="title" required>
+
+           <label>PhD.</label>
+           <input type="radio"name="title" required><br><br>
+
+           <label for="Payment">Payment</label>
+          <Select>
+            <option value="phonepe">phonepe</option>
+            <option value="pytam">pytam</option>
+            <option value="google pay">google pay</option>
+          </Select><br><br>
+          <label for="comment">Comment</label>
+          <textarea name="" id="comment" rows="2" cols="10"></textarea><br><br>
+          <label for="file">file:</label>
+          <input type="file" id ="file">
+
+
+
+        <input type="submit">
+        <input type = "reset">
+
+        
+    </from>
+    
+</body>
+</html>
