@@ -1,0 +1,291 @@
+<!-- Step 1: Start with DOCTYPE to tell browser this is HTML5 -->
+<!DOCTYPE html>
+
+<!-- Step 2: Open html tag with language set to English -->
+<html lang="en">
+
+<!-- Step 3: HEAD section - contains meta info and styles (not visible on page) -->
+<head>
+    <!-- Step 3a: Set character encoding to UTF-8 for special characters -->
+    <meta charset="UTF-8">
+    
+    <!-- Step 3b: Set viewport for responsive design on mobile devices -->
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    
+    <!-- Step 3c: Set page title (shows in browser tab) -->
+    <title>Semantic HTML Tags Example</title>
+    
+    <!-- Step 3d: Start CSS styling -->
+    <style>
+        /* Step 4: CSS Styling - These style rules make the page look nice */
+        
+        /* Remove default margins and padding from all elements */
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        
+        /* Style for the entire page body */
+        body {
+            font-family: Arial, sans-serif;  /* Set font type */
+            line-height: 1.6;                 /* Space between text lines */
+            color: #333;                      /* Text color dark gray */
+        }
+        
+        /* HEADER styling - top section with site title */
+        header {
+            background-color: #2c3e50;  /* Dark blue background */
+            color: white;                /* White text */
+            padding: 20px;               /* Space inside */
+            text-align: center;          /* Center the text */
+            border-bottom: 4px solid #3498db;  /* Blue line at bottom */
+        }
+        
+        /* Style header heading */
+        header h1 {
+            margin-bottom: 10px;
+        }
+        
+        /* NAV styling - navigation bar */
+        nav {
+            background-color: #34495e;  /* Slightly lighter blue */
+            padding: 10px;
+            position: sticky;            /* Stay at top when scrolling */
+            top: 0;
+        }
+        
+        /* Style navigation links */
+        nav a {
+            color: white;
+            text-decoration: none;       /* Remove underline */
+            margin: 0 15px;              /* Space between links */
+            padding: 8px 12px;
+            border-radius: 4px;
+        }
+        
+        /* Change color when hovering over nav links */
+        nav a:hover {
+            background-color: #3498db;   /* Blue background on hover */
+        }
+        
+        /* Container for main content layout */
+        .container {
+            display: flex;               /* Use flexbox for layout */
+            max-width: 1200px;          /* Maximum width */
+            margin: 20px auto;          /* Center container */
+            gap: 20px;                  /* Space between columns */
+            padding: 0 20px;
+        }
+        
+        /* SECTION styling - main content area */
+        section {
+            flex: 3;                     /* Takes 3x more space than aside */
+        }
+        
+        /* ARTICLE styling - individual blog post box */
+        article {
+            background-color: #ecf0f1;  /* Light gray background */
+            padding: 20px;              /* Space inside box */
+            margin-bottom: 20px;        /* Space below box */
+            border-left: 5px solid #3498db;  /* Blue line on left */
+            border-radius: 4px;         /* Round corners */
+        }
+        
+        /* Article heading styling */
+        article h2 {
+            color: #2c3e50;
+            margin-bottom: 10px;
+        }
+        
+        /* Style paragraph text in articles */
+        article p {
+            margin-bottom: 10px;
+        }
+        
+        /* Style the publication date */
+        article .date {
+            color: #7f8c8d;             /* Gray color */
+            font-size: 0.9em;           /* Smaller text */
+        }
+        
+        /* ASIDE styling - sidebar */
+        aside {
+            flex: 1;                     /* Takes 1x space */
+            background-color: #f8f9fa;  /* Very light gray */
+            padding: 20px;
+            border-radius: 4px;
+            border: 1px solid #ddd;     /* Light gray border */
+            height: fit-content;
+            position: sticky;           /* Stay visible when scrolling */
+            top: 60px;
+        }
+        
+        /* Sidebar heading */
+        aside h3 {
+            color: #2c3e50;
+            margin-bottom: 15px;
+            border-bottom: 2px solid #3498db;  /* Blue underline */
+            padding-bottom: 10px;
+        }
+        
+        /* Remove bullet points from lists */
+        aside ul {
+            list-style: none;
+        }
+        
+        /* Style list items */
+        aside li {
+            padding: 8px 0;
+            border-bottom: 1px solid #ddd;
+        }
+        
+        /* Style sidebar links */
+        aside a {
+            color: #3498db;
+            text-decoration: none;
+        }
+        
+        /* Underline link on hover */
+        aside a:hover {
+            text-decoration: underline;
+        }
+        
+        /* FOOTER styling - bottom section */
+        footer {
+            background-color: #2c3e50;  /* Dark blue like header */
+            color: white;
+            text-align: center;
+            padding: 20px;
+            margin-top: 40px;
+            clear: both;
+        }
+        
+        /* Footer paragraph styling */
+        footer p {
+            margin: 5px 0;
+        }
+        
+        /* Mobile responsive design - stack columns on small screens */
+        @media (max-width: 768px) {
+            .container {
+                flex-direction: column;  /* Stack vertically */
+            }
+            
+            nav a {
+                display: inline-block;
+                margin: 5px;
+            }
+        }
+    </style>
+</head>
+
+<!-- Step 5: BODY - This is where all visible content goes -->
+<body>
+    
+    <!-- Step 6: HEADER section - Top of the page with site title/branding -->
+    <!-- This semantic tag tells search engines and screen readers this is the header -->
+    <header>
+        <h1>📰 My Tech Blog</h1>  <!-- Main site title -->
+        <p>Sharing knowledge about web development</p>  <!-- Tagline/subtitle -->
+    </header>
+    
+    <!-- Step 7: NAV section - Navigation menu -->
+    <!-- This semantic tag groups navigation links together -->
+    <nav>
+        <a href="#home">Home</a>              <!-- Link to home page -->
+        <a href="#posts">Blog Posts</a>      <!-- Link to blog posts -->
+        <a href="#about">About</a>           <!-- Link to about page -->
+        <a href="#contact">Contact</a>       <!-- Link to contact page -->
+    </nav>
+    
+    <!-- Step 8: CONTAINER DIV - Wraps main content for layout purposes -->
+    <!-- Uses flexbox to create 2-column layout (main content + sidebar) -->
+    <div class="container">
+        
+        <!-- Step 9: SECTION - Groups all the main content -->
+        <!-- This semantic tag indicates the main content area -->
+        <section>
+            
+            <!-- Step 10: ARTICLE 1 - First blog post -->
+            <!-- Each article is a separate piece of content -->
+            <article>
+                <h2>Understanding HTML Semantic Tags</h2>  <!-- Article title -->
+                <p class="date">Published on February 25, 2026</p>  <!-- Publication date -->
+                <p>
+                    Semantic HTML tags are important for creating well-structured, accessible web pages. 
+                    They provide meaning to the content and help both browsers and developers understand the purpose of different parts of the page.
+                </p>  <!-- First paragraph of article -->
+                <p>
+                    Using semantic tags like &lt;header&gt;, &lt;nav&gt;, &lt;article&gt;, &lt;section&gt;, 
+                    &lt;aside&gt;, and &lt;footer&gt; makes your code more readable and improves SEO.
+                </p>  <!-- Second paragraph of article -->
+            </article>
+            
+            <!-- Step 11: ARTICLE 2 - Second blog post (same structure as article 1) -->
+            <article>
+                <h2>CSS Flexbox for Responsive Design</h2>
+                <p class="date">Published on February 20, 2026</p>
+                <p>
+                    Flexbox is a powerful CSS tool for creating flexible and responsive layouts. 
+                    It simplifies the process of aligning and distributing space among items in a container.
+                </p>
+                <p>
+                    With properties like justify-content, align-items, and flex-direction, 
+                    you can create complex layouts with minimal code.
+                </p>
+            </article>
+            
+            <!-- Step 12: ARTICLE 3 - Third blog post (same structure) -->
+            <article>
+                <h2>Getting Started with JavaScript</h2>
+                <p class="date">Published on February 15, 2026</p>
+                <p>
+                    JavaScript is the programming language of the web. It allows you to add interactivity 
+                    and dynamic behavior to your web pages.
+                </p>
+                <p>
+                    From simple DOM manipulation to complex SPAs, JavaScript is essential for modern web development.
+                </p>
+            </article>
+            
+        </section>  <!-- End of SECTION -->
+        
+        <!-- Step 13: ASIDE - Sidebar with supplementary content -->
+        <!-- This semantic tag indicates content alongside main content -->
+        <aside>
+            <!-- Sidebar section 1: Categories -->
+            <h3>📚 Categories</h3>
+            <ul>
+                <li><a href="#html">HTML</a></li>      <!-- Category link 1 -->
+                <li><a href="#css">CSS</a></li>        <!-- Category link 2 -->
+                <li><a href="#javascript">JavaScript</a></li>  <!-- Category link 3 -->
+                <li><a href="#responsive">Responsive Design</a></li>  <!-- Category link 4 -->
+            </ul>
+            
+            <!-- Sidebar section 2: Recent Posts -->
+            <h3>Recent Posts</h3>
+            <ul>
+                <li><a href="#post1">Semantic HTML Guide</a></li>  <!-- Recent post link 1 -->
+                <li><a href="#post2">Flexbox Tips</a></li>        <!-- Recent post link 2 -->
+                <li><a href="#post3">JS Basics</a></li>           <!-- Recent post link 3 -->
+            </ul>
+        </aside>  <!-- End of ASIDE -->
+        
+    </div>  <!-- End of CONTAINER -->
+    
+    <!-- Step 14: FOOTER section - Bottom of the page -->
+    <!-- This semantic tag indicates the footer area -->
+    <footer>
+        <p>&copy; 2026 My Tech Blog. All rights reserved.</p>  <!-- Copyright notice -->
+        <p>
+            <!-- Footer links for privacy and terms -->
+            <a href="#privacy" style="color: #3498db; text-decoration: none;">Privacy Policy</a> | 
+            <a href="#terms" style="color: #3498db; text-decoration: none;">Terms of Service</a>
+        </p>
+    </footer>  <!-- End of FOOTER -->
+    
+</body>  <!-- End of BODY -->
+
+<!-- Step 15: Close HTML tag - This ends the entire HTML document -->
+</html>
