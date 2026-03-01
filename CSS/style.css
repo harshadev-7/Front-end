@@ -1,0 +1,17 @@
+body{
+    background-color: black;
+    color: white;
+}
+h1{
+    color:white ;
+    text-align: center;
+}
+#p1{
+    color: aqua;
+}
+#p2{
+    color: chartreuse;
+}
+#p3{
+    color: mediumpurple;
+}
