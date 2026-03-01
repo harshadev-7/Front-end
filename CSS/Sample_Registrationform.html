@@ -1,0 +1,114 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Registration form</title>
+    <style>
+        body{
+            background: linear-gradient(to right, cyan,rgb(3, 3, 194), mediumpurple,rgb(220, 108, 173));
+            font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+            min-height: 100vh;
+        }
+        .formcontainer
+        {
+            margin-bottom: 15px;
+        }
+        h2{
+            text-align: center;
+        }
+        label{
+            font-weight: bold;
+        }
+        span{
+            display:inline;
+        }
+        input{
+            width: 30%;
+            border:3px double #aaa;
+            padding: 3px;
+            border-radius: 7px;
+            margin-top: 15px;
+        }
+        label{
+            margin-bottom: 5px;
+            display: block;
+            margin-top: 5px;
+        }
+        .radio-group,.checkbox,.Course{
+            margin-top: 20px;
+            margin-left: 10px;
+        }
+        .goku,select{
+            margin-top: 20px;
+        }
+        .button{
+            text-align: center;
+            margin:auto;
+        
+        }
+        .button-s{
+            padding: 10px 20px;
+            margin-top: 20px;
+            border-radius: 5px;
+            border: none;
+            cursor: pointer;
+            margin-right: 50px;
+           
+        }
+        .box{
+            width: auto;
+            height: auto;
+            background-color: #aaa;
+            text-align: center;
+            align-items: center;
+        }
+    </style>
+</head>
+<body>
+    
+    <!--<div class="formcontainer">-->
+    <h2>Registration </h2>
+    <label for="userame">Username:</label>
+    <input type="text" id="username"placeholder ="Harshadev-7" required>
+    <label for="password">password:</label>
+    <input type="password" id="password" placeholder="Sailaja@99!" required>
+    <label for="ph">phone no:</label>
+    <input type="tel" id="ph" placeholder="123-456-7890"pattern [0-9]{3}-[0-9]{3}-[0-9]{4} required>
+    <label for="bday"><span>Date of Birth:</span></label>
+    <input type="date"id=dbay placeholder="03-05-2007" required>
+    <div class="radio-group">
+    <label>Gender</label>
+    <input type="radio" name="Gender">Male
+    <input type="radio" name ="Gender">Female
+    <input type="radio" name ="Gender">Other
+    </div>
+    <div class="checkbox">
+        <label for="checkbox">Hobbies:</label>
+        <input type="checkbox" name="Hobbies">Reading
+        <input type="checkbox" name="Hobbies" >Sports
+        <input type="checkbox"name="Hobbies">Music
+    </div>
+    <div class="Course">
+    <label>course List</label>
+    <select>
+        <option value="B.Tech">B.Tech</option>
+        <option >M.Tech</option>
+        <option>B.SC</option>
+        <option>MBA</option>
+    </select>
+    </div>
+    <label class= "goku">City</label>
+    <select multiple size="3">
+    <option value="Hyderabad">Hyderabad</option>
+    <option >Bengaluru</option>
+    <option >chennai</option>
+    <option>Dehli</option>
+    <option>Andhra Pradesh</option>
+    </select>
+    <div class="button">
+    <button class="button-s" type="submit" > Submit</button>
+    <button class="button-s"type="reset">Reset</button>
+    </div>
+</body>
+</html>
